@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 	
 body, html {
 	height: 100%;
@@ -36,23 +39,25 @@ body, html {
 
 #section-main {
 	height: 100%;
-}
-
-#wrapper-main {
-	height: 100%;
-	margin: 0;
-	padding: 0;
+	width: 100%;
 }
 
 #sidebar-wrapper {
-	position: fixed;
-	width: 250px;
+	width: 20%;
 	height: 100%;
-	margin-top: 150px;
+	margin: 0;
 	background-color: gray;
+	float: left;
+}
 
-#wrapper-results {
+#results-wrapper {
 	height: 100%;
-	margin-top: 150px;
+	width: 80%;
+	float: left;
+	margin: 0;
 	background-color: seagreen;
+}
+
+.tom-trivia {
+	
 }
