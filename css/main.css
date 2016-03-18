@@ -4,6 +4,10 @@ body {
 
 #masthead {
 	list-style-type: none;
-	display: inline-block;
+	margin: 1em 5em 1em 1em;
+}
+
+#masthead li {
+	margin-left: 0;
 }
 
