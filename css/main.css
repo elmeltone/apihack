@@ -2,12 +2,27 @@ body {
 	
 }
 
+header {
+	border-bottom: 1px solid black;
+}
+
 #masthead {
 	list-style-type: none;
-	margin: 1em 5em 1em 1em;
+	margin: 1em;
+	padding-left: 0;
+	padding-right: 20%;
 }
 
-#masthead li {
-	margin-left: 0;
+#general-search {
+	min-width: 300px;
+	max-height: 2em;
+	text-align: center;
 }
 
+#subtitle {
+	margin: 1em;
+}
+
+#sidebar {
+	padding: 1em;
+}
