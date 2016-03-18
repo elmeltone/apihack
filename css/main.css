@@ -2,16 +2,19 @@
     box-sizing: border-box;
 }
 	
-body, html {
+html, body {
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
 
 #header {
+	position: relative;
 	border-bottom: 1px solid black;
 	background: lightblue;
 	height: 150px;
+	margin-top: 0;
 }
 
 #masthead-list {
@@ -56,6 +59,9 @@ body, html {
 	float: left;
 	margin: 0;
 	background-color: seagreen;
+	display: flex;
+	text-align: center;
+	align-items: center;
 }
 
 .tom-trivia {
