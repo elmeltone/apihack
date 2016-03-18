@@ -10,24 +10,37 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar-fixed-top" id="masthead">
-		<h1 class="title">Tom's Trove</h1>
-		<p class="subtitle">Search American Art via the Library of Congress API</p>
-	</nav>
-	<div class="container">
-		
-	</div>
-	<div class="template hidden">
-		<ul class="">
-			<li class=""><a href="" target="_blank"></a></li>
-			<li class=""></li>
-			<li class=""></li>
-			<li class=""></li>
+	<header class="navbar">
+		<ul id="masthead">
+			<li id="title" style="float:left">Tom's Trove</li>
+			<li id="general-search" style="float:right"><input type="text"></li>
 		</ul>
-		<div class="error">
-			<p></p>
+		<div class="subtitle">
+			<p class="col-md-6" id="subtitle">Search American Art via the Library of Congress API</p>
 		</div>
-	</div>
+	</header>
+	<section class="">
+		<div id="sidebar">
+			<p>Detailed search</p>
+			<input class="details" type="text"><br>
+			<input class="details" type="text"><br>
+			<input class="details" type="text"><br>
+		</div>
+		<div class="container">
+		
+		</div>
+		<div class="template hidden">
+			<ul class="">
+				<li class=""><a href="" target="_blank"></a></li>
+				<li class=""></li>
+				<li class=""></li>
+				<li class=""></li>
+			</ul>
+			<div class="error">
+				<p></p>
+			</div>
+		</div>
+	</section>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
