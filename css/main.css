@@ -1,5 +1,5 @@
-body {
-	
+body, html {
+	height: 100%;
 }
 
 header {
@@ -13,6 +13,28 @@ header {
 	padding-right: 20%;
 }
 
+#wrapper-main {
+	height: 100%;
+	width: 100%;
+}
+
+#wrapper-row {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}
+
+#sidebar {
+	width: 250px;
+	height: 100%;
+	border-right: 1px solid black;
+	padding: 1em;
+}
+
+#wrapper-results {
+	height: 100%;
+}
+
 #general-search {
 	min-width: 300px;
 	max-height: 2em;
@@ -21,8 +43,4 @@ header {
 
 #subtitle {
 	margin: 1em;
-}
-
-#sidebar {
-	padding: 1em;
 }
