@@ -40,6 +40,8 @@
 	
 	var getImages = function() {
 		
+		// NEED PARAMETERS TO PASS IN REQUEST TO API???
+		
 		$.ajax({
 		    type: 'get',
 		    url: '//loc.gov/pictures/',
@@ -66,8 +68,10 @@
 	};
 	
 $(function() {
-	
-	$('#general').on('click', function() {
-		
-	})
+	$('.image-getter').on('submit', function(e) {
+		e.preventDefault();
+		$('.results').html('');
+		var query = $(this).find("input[class='general']").val();
+		getImages(query);
+	});
 });
