@@ -1,4 +1,3 @@
-$(function() {
 	
 	var showImage = function(image) {
 		var result = $('.template .general').clone();
@@ -28,6 +27,45 @@ $(function() {
 		
 	};
 	
+	var showSearchResults = function(query, resultNum) {
+		var results = '<strong>' + resultNum + ' results...</strong>';
+		return results;
+	};
+	
+	var showError = function(error){
+		var errorElem = $('.templates .error').clone();
+		var errorText = '<p>' + error + '</p>';
+		errorElem.append(errorText);
+	};
+	
+	var getImages = function() {
+		
+		$.ajax({
+		    type: 'get',
+		    url: '//loc.gov/pictures/',
+		    dataType:'json',
+		    data:{
+		        fo:'jsonp',
+		    },
+		});
+		
+		.done(function(result){
+			var searchResults = showSearchResults(/*request.tagged*/, result.results.length);
+		
+			$('.search-results').html(searchResults);
+			$.each(result.results, function(i, item) {
+				var image = showImage(item);
+				$('.results').append(image);
+			});
+		})
+		.fail(function(jqXHR, error) {
+			var errorElem = showError(error);
+			$('.search-results').append(errorElem);
+		});
+		
+	};
+	
+$(function() {
 	
 	$('#general').on('click', function() {
 		
