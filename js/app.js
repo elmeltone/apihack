@@ -44,13 +44,12 @@
 		
 		$.ajax({
 		    type: 'get',
-		    url: '//loc.gov/pictures/',
+		    url: '//loc.gov/pictures/?q=' + /*request.tagged?*/,
 		    dataType:'json',
 		    data:{
 		        fo:'jsonp',
 		    },
 		});
-		
 		.done(function(result){
 			var searchResults = showSearchResults(/*request.tagged*/, result.results.length);
 		
@@ -62,6 +61,7 @@
 		})
 		.fail(function(jqXHR, error) {
 			var errorElem = showError(error);
+			$('.searchresults').html('');
 			$('.search-results').append(errorElem);
 		});
 		
