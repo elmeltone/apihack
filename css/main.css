@@ -8,11 +8,11 @@ html, body {
 	margin: auto;
 }
 
-nav, #sidebar-title {
-	font-family: 'Mrs Saint Delafield', cursive;
+#title, #subtitle, #sidebar-title, .tom-trivia {
+	font-style: italic;
 }
 
-#header {
+header {
 	position: relative;
 	border-bottom: 1px solid black;
 	background: lightblue;
@@ -20,32 +20,39 @@ nav, #sidebar-title {
 	margin-top: 0;
 }
 
-#masthead-list {
+/*#masthead-list {
 	list-style-type: none;
 	margin: 1em;
 	padding-left: 0;
 	padding-right: 20%;
 	height: 50px;
 	width: 100%;
+}*/
+
+#title {
+	font-size: 36px;
+	width: 25%;
+	margin: 0;
+	padding: 5px 0 0 10px;
+	float: left;
+	height: 100px;
 }
 
-.image-getter, #section-main {
-	font-family: 'Libre Baskerville', serif;
+.subtitle {
+	font-size: 20px;
+	text-align: right;
+	width: 75%;
+	margin: 0;
+	padding: 23px 15px 0 0;
+	float: right;
+	height: 100px;
 }
 
 #general-search {
-	min-width: 300px;
+	width: 100%;
 	max-height: 2em;
-	text-align: center;
-}
-
-#title {
-	font-size: 60px;
-}
-
-#subtitle {
-	margin: 1em;
-	font-size: 30px;
+	display: inline;
+	text-align: left;
 }
 
 #section-main {
