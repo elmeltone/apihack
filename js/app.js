@@ -40,18 +40,18 @@
 	
 	var getImages = function() {
 		
-		// NEED PARAMETERS TO PASS IN REQUEST TO API???
+		var searchTerm = $('#general').val();
 		
 		$.ajax({
 		    type: 'get',
-		    url: '//loc.gov/pictures/?q=' + /*request.tagged?*/,
-		    dataType:'json',
+		    url: 'http://loc.gov/pictures/?q=' + searchTerm + '&fo=json',
+		    dataType:'jsonp',
 		    data:{
 		        fo:'jsonp',
 		    },
-		});
+		})
 		.done(function(result){
-			var searchResults = showSearchResults(/*request.tagged*/, result.results.length);
+			var searchResults = showSearchResults(searchTerm, result.results.length);
 		
 			$('.search-results').html(searchResults);
 			$.each(result.results, function(i, item) {
