@@ -67,10 +67,7 @@
 		
 	};
 	
-$(function() {
-
-	$('.search-results').html(welcome);
-	
+$(function() {	
 	$('.image-getter').on('submit', function(e) {
 		e.preventDefault();
 		$('.results').html('');
