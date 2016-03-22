@@ -1,7 +1,7 @@
-	
+
 	var showImage = function(image) {
 		var result = $('.template .general').clone();
-		
+
 		var imageElemLink = result.find('.image a');
 		if (image.links.resource != null)
 			imageElemLink.attr('href', image.links.resource);
@@ -68,6 +68,9 @@
 	};
 	
 $(function() {
+
+	$('.search-results').html(welcome);
+	
 	$('.image-getter').on('submit', function(e) {
 		e.preventDefault();
 		$('.results').html('');
