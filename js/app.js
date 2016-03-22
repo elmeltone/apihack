@@ -44,10 +44,10 @@
 		
 		$.ajax({
 		    type: 'get',
-		    url: 'http://loc.gov/pictures/?q=' + searchTerm + '&fo=json',
+		    url: 'http://loc.gov/pictures/?q=' + searchTerm/* + '&fo=jsonp'*/,
 		    dataType:'jsonp',
 		    data:{
-		        fo:'jsonp',
+		        fo:'json',
 		    },
 		})
 		.done(function(result){
