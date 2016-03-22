@@ -51,7 +51,7 @@
 		    },
 		})
 		.done(function(result){
-			var searchResults = showSearchResults(searchTerm, result.results.length);
+			var searchResults = showSearchResults(searchTerm, result.collections.length);
 		
 			$('.search-results').html(searchResults);
 			$.each(result.results, function(i, item) {

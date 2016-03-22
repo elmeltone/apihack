@@ -8,6 +8,10 @@ html, body {
 	margin: auto;
 }
 
+nav, #sidebar-title {
+	font-family: 'Mrs Saint Delafield', cursive;
+}
+
 #header {
 	position: relative;
 	border-bottom: 1px solid black;
@@ -25,6 +29,10 @@ html, body {
 	width: 100%;
 }
 
+.image-getter, #section-main {
+	font-family: 'Libre Baskerville', serif;
+}
+
 #general-search {
 	min-width: 300px;
 	max-height: 2em;
@@ -32,11 +40,12 @@ html, body {
 }
 
 #title {
-	font-size: 30px;
+	font-size: 60px;
 }
 
 #subtitle {
 	margin: 1em;
+	font-size: 30px;
 }
 
 #section-main {
