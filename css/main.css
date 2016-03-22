@@ -18,6 +18,7 @@ header {
 	background: lightblue;
 	height: 150px;
 	margin-top: 0;
+	height: 200px;
 }
 
 /*#masthead-list {
@@ -53,6 +54,7 @@ header {
 	max-height: 2em;
 	display: inline;
 	text-align: left;
+	margin-bottom: 10px;
 }
 
 #section-main {
