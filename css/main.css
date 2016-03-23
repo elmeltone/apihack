@@ -81,7 +81,15 @@ header {
 	align-items: center;
 }
 
+.results {
+	margin: 1em;
+}
+
 .tom-trivia {
 	
 }
 
+#general-image {
+	list-style-type: none;
+	
+}

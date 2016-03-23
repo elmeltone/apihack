@@ -9,7 +9,7 @@
 		var imageElemPic = result.find('.image img');
 		imageElemPic.attr("src", target.image.thumb);
 
-		/*var imgCreator = result.find('.image-creator a');
+		var imgCreator = result.find('.image-creator a');
 		if (target.links.resource != null)
 			imgCreator.attr('href', target.links.resource);
 		else {imgCreator.attr('href', target.links.item)};
@@ -21,7 +21,7 @@
 		var imgNotes = result.find('.image-notes');
 		if (target.title != null)
 			imgNotes.text(target.title);
-		else {imgNotes.text("No title")};*/
+		else {imgNotes.text("No title")};
 
 		return result;
 		
@@ -57,7 +57,7 @@
 			$.each(result.results, function(i, item) {
 				console.log(item);
 				var printImage = showImage(item);
-				$('.results').append(printImage);
+				$(printImage).appendTo('.results');
 			});
 		})
 		.fail(function(jqXHR, error) {
