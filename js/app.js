@@ -3,25 +3,12 @@
 		var result = $('.template .general').clone();
 
 		var imageElemLink = result.find('.image a');
-		if (image.collections.links.resource != null)
-			imageElemLink.attr('href', image.collections.links.resource);
-		else {imageElemLink.attr('href', image.collections.links.item)};
+		imageElemLink.attr('href', image.link);
 		var imageElemPic = result.find('.image img');
-		imageElemPic.attr("src", image.collections.image.thumb);
+		imageElemPic.attr("src", image.thumb);
 		
-		var imgCreator = result.find('.image-creator a');
-		if (image.collections.links.resource != null)
-			imgCreator.attr('href', image.collections.links.resource);
-		else {imgCreator.attr('href', image.collections.links.item)};
-		imgCreator.text(image.collections.creator);
-		
-		var imgCallNum = results.find('.image-callnumber');
-		imgCallNum.text(image.collections.call_number);
-		
-		var imgNotes = results.find('.image-notes');
-		if (image.collections.title != null)
-			imgNotes.text(image.collections.title);
-		else {imgNotes.text("No title")};
+		var imgNotes = result.find('.image-notes');
+		imgNotes.text(image.title);
 		
 		return result;
 		
