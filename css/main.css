@@ -60,6 +60,7 @@ header {
 #section-main {
 	height: 100%;
 	width: 100%;
+	overflow: hidden;
 }
 
 #sidebar-wrapper {
@@ -73,7 +74,6 @@ header {
 #results-wrapper {
 	height: 100%;
 	width: 80%;
-	float: left;
 	margin: 0;
 	background-color: seagreen;
 	display: flex;
@@ -81,12 +81,20 @@ header {
 	align-items: center;
 }
 
+.search-total {
+	margin: 1em;
+	width: 100%;
+	text-align: center;
+}
+
 .results {
 	margin: 1em;
+	width: 100%;
+	text-align: center;
 }
 
 .tom-trivia {
-	
+	width: 100%;
 }
 
 #general-image {
