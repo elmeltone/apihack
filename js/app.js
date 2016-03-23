@@ -1,16 +1,29 @@
 
 	var showImage = function(image) {
 		var result = $('.template .general').clone();
-
-		var imageElemLink = result.find('.image a');
-		imageElemLink.attr('href', image.link);
-		var imageElemPic = result.find('.image img');
-		imageElemPic.attr("src", image.thumb);
 		
-		var imgNotes = result.find('.image-notes');
-		imgNotes.text(image.title);
+				var imageElemLink = result.find('.image a');
+				if (image.results.links.resource != null)
+					imageElemLink.attr('href', image.results.links.resource);
+				else {imageElemLink.attr('href', image.results.links.item)};
+				var imageElemPic = result.find('.image img');
+				imageElemPic.attr("src", image.results.image.thumb);
 		
-		return result;
+				var imgCreator = result.find('.image-creator a');
+				if (image.results.links.resource != null)
+					imgCreator.attr('href', image.results.links.resource);
+				else {imgCreator.attr('href', image.results.links.item)};
+				imgCreator.text(image.results.creator);
+		
+				var imgCallNum = result.find('.image-callnumber');
+				imgCallNum.text(image.results.call_number);
+		
+				var imgNotes = result.find('.image-notes');
+				if (image.title != null)
+					imgNotes.text(image.results.title);
+				else {imgNotes.text("No title")};
+		
+				return result;
 		
 	};
 	
@@ -30,18 +43,18 @@
 		var searchTerm = $('#general').val();
 		
 		$.ajax({
-		    type: 'get',
-		    url: 'http://loc.gov/pictures/?q=' + searchTerm/* + '&fo=jsonp'*/,
+		    type: 'search',
+		    url: 'http://loc.gov/pictures/search/?q=' + searchTerm/* + '&fo=jsonp'*/,
 		    dataType:'jsonp',
 		    data:{
 		        fo:'json',
 		    },
 		})
 		.done(function(result){
-			var searchResults = showSearchResults(searchTerm, result.collections.length);
+			var searchResults = showSearchResults(searchTerm, result.results.length);
 		
 			$('.search-results').html(searchResults);
-			$.each(result.collections, function(i, item) {
+			$.each(result.results, function(i, item) {
 				var image = showImage(item);
 				$('.results').append(image);
 			});
