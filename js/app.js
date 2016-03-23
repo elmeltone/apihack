@@ -38,31 +38,32 @@
 		errorElem.append(errorText);
 	};
 	
-	var getImages = function() {
+	var getImages = function(query) {
 		
-		var searchTerm = $('#general').val();
+		//var searchTerm = $('#general').val();
 		
 		$.ajax({
 		    type: 'search',
-		    url: 'http://loc.gov/pictures/search/?q=' + searchTerm/* + '&fo=jsonp'*/,
+		    url: 'http://loc.gov/pictures/search/?q=' + query/* + '&fo=jsonp'*/,
 		    dataType:'jsonp',
 		    data:{
 		        fo:'json',
 		    },
 		})
 		.done(function(result){
-			var searchResults = showSearchResults(searchTerm, result.results.length);
+			var searchResults = showSearchResults(query, result.results.length);
 		
-			$('.search-results').html(searchResults);
+			$('.search-total').html(searchResults);
 			$.each(result.results, function(i, item) {
-				var image = showImage(item);
-				$('.results').append(image);
+				console.log(item);
+				var printImage = showImage(item);
+				$('.results').append(printImage);
 			});
 		})
 		.fail(function(jqXHR, error) {
 			var errorElem = showError(error);
-			$('.searchresults').html('');
-			$('.search-results').append(errorElem);
+			$('.search-total').html('');
+			$('.search-total').append(errorElem);
 		});
 		
 	};
@@ -71,7 +72,7 @@ $(function() {
 	$('.image-getter').on('submit', function(e) {
 		e.preventDefault();
 		$('.results').html('');
-		var query = $(this).find("input[class='general']").val();
+		var query = $(this).find("input[name='general']").val();
 		getImages(query);
 	});
 });
