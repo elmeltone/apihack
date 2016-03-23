@@ -1,26 +1,26 @@
 
-	var showImage = function(image) {
+	var showImage = function(target) {
 		var result = $('.template .general').clone();
 		
 		var imageElemLink = result.find('.image a');
-		if (image.results.links.resource != null)
-			imageElemLink.attr('href', image.results.links.resource);
-		else {imageElemLink.attr('href', image.results.links.item)};
+		if (target.links.resource != null)
+			imageElemLink.attr('href', target.links.resource);
+		else {imageElemLink.attr('href', target.links.item)};
 		var imageElemPic = result.find('.image img');
-		imageElemPic.attr("src", image.results.image.thumb);
+		imageElemPic.attr("src", target.image.thumb);
 
 		var imgCreator = result.find('.image-creator a');
-		if (image.results.links.resource != null)
-			imgCreator.attr('href', image.results.links.resource);
-		else {imgCreator.attr('href', image.results.links.item)};
-		imgCreator.text(image.results.creator);
+		if (target.links.resource != null)
+			imgCreator.attr('href', target.links.resource);
+		else {imgCreator.attr('href', target.links.item)};
+		imgCreator.text(target.creator);
 
 		var imgCallNum = result.find('.image-callnumber');
-		imgCallNum.text(image.results.call_number);
+		imgCallNum.text(target.call_number);
 
 		var imgNotes = result.find('.image-notes');
-		if (image.title != null)
-			imgNotes.text(image.results.title);
+		if (target.title != null)
+			imgNotes.text(target.title);
 		else {imgNotes.text("No title")};
 
 		return result;
