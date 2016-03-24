@@ -2,17 +2,21 @@
 	var showImage = function(target) {
 		var result = $('#general-image').clone();
 		
+		var imgLink1 = "http:" + target.links.resource;
+		var imgLink2 = "http:" + target.links.item;
+		var imgThumb = "http:" + target.image.thumb;
+		
 		var imageElemLink = result.find('.image a');
-		if (target.links.resource != null)
-			imageElemLink.attr('href', target.links.resource);
-		else {imageElemLink.attr('href', target.links.item)};
+		if (imgLink1 != null)
+			imageElemLink.attr('href', imgLink1);
+		else {imageElemLink.attr('href', imgLink2)};
 		var imageElemPic = result.find('.image img');
-		imageElemPic.attr("src", target.image.thumb);
+		imageElemPic.attr("src", imgThumb);
 
 		var imgCreator = result.find('.image-creator a');
-		if (target.links.resource != null)
-			imgCreator.attr('href', target.links.resource);
-		else {imgCreator.attr('href', target.links.item)};
+		if (imgLink1 != null)
+			imgCreator.attr('href', imgLink1);
+		else {imgCreator.attr('href', imgLink2)};
 		imgCreator.text(target.creator);
 
 		var imgCallNum = result.find('.image-callnumber');
@@ -33,7 +37,7 @@
 	};
 	
 	var showError = function(error){
-		var errorElem = $('.templates .error').clone();
+		var errorElem = $('.template .error').clone();
 		var errorText = '<p>' + error + '</p>';
 		errorElem.append(errorText);
 	};
@@ -53,7 +57,7 @@
 		.done(function(result){
 			var searchResults = showSearchResults(query, result.results.length);
 		
-			$('.search-total').html(searchResults);
+			$('.results').html(searchResults);
 			$.each(result.results, function(i, item) {
 				console.log(item);
 				var printImage = showImage(item);
