@@ -44,11 +44,9 @@
 	
 	var getImages = function(query) {
 		
-		//var searchTerm = $('#general').val();
-		
 		$.ajax({
 		    type: 'search',
-		    url: 'http://loc.gov/pictures/search/?q=' + query/* + '&fo=jsonp'*/,
+		    url: 'http://loc.gov/pictures/search/?q=' + query,
 		    dataType:'jsonp',
 		    data:{
 		        fo:'json',
