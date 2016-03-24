@@ -57,7 +57,6 @@
 		
 			$('.results').html(searchResults);
 			$.each(result.results, function(i, item) {
-				console.log(item);
 				var printImage = showImage(item);
 				$(printImage).appendTo('.results');
 			});
