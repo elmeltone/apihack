@@ -32,7 +32,7 @@
 	};
 	
 	var showSearchResults = function(query, resultNum) {
-		var results = '<strong>' + resultNum + ' results...</strong>';
+		var results = '<p class="count"><strong>' + resultNum + ' results...</strong></p>';
 		return results;
 	};
 	
@@ -43,7 +43,7 @@
 	};
 	
 	var getImages = function(query) {
-		//Get images
+		
 		$.ajax({
 		    type: 'search',
 		    url: 'http://loc.gov/pictures/search/?q=' + query,
@@ -53,7 +53,7 @@
 		    },
 		})
 		.done(function(result){
-			//Show results
+			
 			var searchResults = showSearchResults(query, result.search.hits);
 		
 			$('.results').html(searchResults);
@@ -62,10 +62,6 @@
 				$(printImage).appendTo('.results');
 			});
 			
-			//Manage pagination
-			var currentPage = result.pages.current;
-			var totalPages = result.pages.total;
-			//var 
 		})
 		//In case of errors
 		.fail(function(jqXHR, error) {
