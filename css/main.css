@@ -12,11 +12,11 @@ html, body {
 	font-style: italic;
 }
 
-header {
-	position: relative;
+#header {
+	/*position: relative;*/
 	border-bottom: 1px solid black;
 	background: lightblue;
-	height: 150px;
+	height: 10%;
 	margin-top: 0;
 	height: 200px;
 }
@@ -57,11 +57,11 @@ header {
 	margin-bottom: 10px;
 }
 
-#section-main {
+/*#section-main {
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
-}
+	overflow: auto;
+}*/
 
 #sidebar-wrapper {
 	width: 20%;
@@ -75,10 +75,12 @@ header {
 	height: 100%;
 	width: 80%;
 	margin: 0;
+	padding: 0;
 	background-color: seagreen;
 	display: flex;
 	text-align: center;
 	align-items: center;
+	overflow: auto;
 }
 
 /*.search-total {
@@ -88,9 +90,10 @@ header {
 }*/
 
 .results {
-	margin: 1em;
+	margin: 210px;
 	width: 100%;
 	text-align: center;
+	overflow: hidden;
 }
 
 .tom-trivia {
@@ -98,6 +101,5 @@ header {
 }
 
 #general-image {
-	list-style-type: none;
-	
+	list-style-type: none;	
 }
