@@ -43,7 +43,7 @@
 	};
 	
 	var getImages = function(query) {
-		
+		//Get images
 		$.ajax({
 		    type: 'search',
 		    url: 'http://loc.gov/pictures/search/?q=' + query,
@@ -53,14 +53,21 @@
 		    },
 		})
 		.done(function(result){
-			var searchResults = showSearchResults(query, result.results.length);
+			//Show results
+			var searchResults = showSearchResults(query, result.search.hits);
 		
 			$('.results').html(searchResults);
 			$.each(result.results, function(i, item) {
 				var printImage = showImage(item);
 				$(printImage).appendTo('.results');
 			});
+			
+			//Manage pagination
+			var currentPage = result.pages.current;
+			var totalPages = result.pages.total;
+			//var 
 		})
+		//In case of errors
 		.fail(function(jqXHR, error) {
 			var errorElem = showError(error);
 			$('.search-total').html('');

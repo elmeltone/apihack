@@ -5,6 +5,10 @@ html, body {
 	margin: auto;
 }
 
+a:link {
+	color: black;
+}
+
 #title, #subtitle, #sidebar-title, .tom-trivia {
 	font-style: italic;
 }
