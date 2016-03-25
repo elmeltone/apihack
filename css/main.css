@@ -10,7 +10,7 @@ a:link {
 }
 
 img {
-	margin: 0 auto 0 auto;
+	margin: auto;
 	
 }
 
@@ -81,13 +81,31 @@ img {
 }
 
 .tom-trivia {
-	width: 80%;
+	max-width: 55%
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-right: 0;
 }
 
 .count {
-	margin-bottom: 15px;
+	max-width: 55%
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 25px;
 }
 
 #general-image {
 	list-style-type: none;
+	padding-bottom: 25px;
+	padding-left: 0;
+}
+
+#general-image li {
+	max-width: 55%
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.image-creator {
+	padding-top: -10px;
 }
