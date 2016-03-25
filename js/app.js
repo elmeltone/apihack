@@ -43,9 +43,9 @@
 	};
 	
 	var showNextPage = function(query, resultPage) {
-		var page = '<a id="nextPage" href="' + resultPage + '"><p>Next Page</p></a>';
+		var page = '<a id="nextPage" href="http:' + resultPage + '"><p>Next Page</p></a>';
 		return page;
-	}
+	};
 	
 	var getImages = function(query) {
 		
