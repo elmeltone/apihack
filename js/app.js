@@ -72,11 +72,26 @@
 		
 	};
 	
+	var turnPage = function(query) {
+		
+		var nextPage = $('#nextPage').clone();
+		var pageLink = "http:" + query.search.pages.next;
+		var endPage = $('#endPage').clone();
+		
+		$(nextPage).attr('href', pageLink);
+		if (pageLink != (null || undefined))
+			$(nextPage).appendTo('#results-wrapper');
+		else {
+			$(endPage).appendTo('#results-wrapper')
+		};	
+	};
+	
 $(function() {	
 	$('.image-getter').on('submit', function(e) {
 		e.preventDefault();
 		$('.results').html('');
 		var query = $(this).find("input[name='general']").val();
 		getImages(query);
+		turnPage(query);
 	});
 });

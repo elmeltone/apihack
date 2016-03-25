@@ -109,3 +109,7 @@ img {
 .image-creator {
 	padding-top: -10px;
 }
+
+.hidden {
+	display: none;
+}
