@@ -42,6 +42,11 @@
 		errorElem.append(errorText);
 	};
 	
+	var showNextPage = function(query, resultPage) {
+		var page = '<a id="nextPage" href="' + resultPage + '"><p>Next Page</p></a>';
+		return page;
+	}
+	
 	var getImages = function(query) {
 		
 		$.ajax({
@@ -52,38 +57,21 @@
 		        fo:'json',
 		    },
 		})
-		.done(function(result){
-			
+		.done(function(result){	
 			var searchResults = showSearchResults(query, result.search.hits);
-		
 			$('.results').html(searchResults);
 			$.each(result.results, function(i, item) {
 				var printImage = showImage(item);
 				$(printImage).appendTo('.results');
 			});
-			
-		})
-		//In case of errors
-		.fail(function(jqXHR, error) {
-			var errorElem = showError(error);
-			$('.search-total').html('');
-			$('.search-total').append(errorElem);
-		});
-		
-	};
-	
-	var turnPage = function(query) {
-		
-		var nextPage = $('#nextPage').clone();
-		var pageLink = "http:" + query.search.pages.next;
-		var endPage = $('#endPage').clone();
-		
-		$(nextPage).attr('href', pageLink);
-		if (pageLink != (null || undefined))
-			$(nextPage).appendTo('#results-wrapper');
-		else {
-			$(endPage).appendTo('#results-wrapper')
-		};	
+		})		
+		.done(function(result){
+			var nextPage = showNextPage(query, result.pages.next);
+			var endPage = '<p id="endPage">End results</p>'
+			if (result.pages.next != ((null) || (undefined)))
+				$(nextPage).appendTo('.results');
+			else {$(endPage).appendTo('.results')};
+			});
 	};
 	
 $(function() {	
@@ -92,6 +80,5 @@ $(function() {
 		$('.results').html('');
 		var query = $(this).find("input[name='general']").val();
 		getImages(query);
-		turnPage(query);
 	});
 });
