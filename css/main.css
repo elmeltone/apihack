@@ -5,8 +5,12 @@ html, body {
 	margin: auto;
 }
 
+body {
+	
+}
+
 a:link {
-	color: black;
+	/*color: red;*/
 }
 
 img {
@@ -19,7 +23,7 @@ img {
 }
 
 #header {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid white;
 	background: lightblue;
 	height: 10%;
 	margin-top: 0;
@@ -28,9 +32,6 @@ img {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat
-	-webkit-text-fill-color: darkblue;
-   -webkit-text-stroke-width: 0.5px;
-   -webkit-text-stroke-color: white;
 }
 
 #title {
@@ -40,6 +41,7 @@ img {
 	padding: 5px 0 0 10px;
 	float: left;
 	height: 100px;
+	color: white;
 }
 
 .subtitle {
@@ -50,6 +52,7 @@ img {
 	padding: 23px 15px 0 0;
 	float: right;
 	height: 100px;
+	color: white;
 }
 
 #general-search {
@@ -64,8 +67,11 @@ img {
 	height: 100%;
 	margin: 0;
 	padding: 10px;
-	background-color: gray;
+	background-color: darkblue;
+	color: white;
 	float: left;
+	border-right: solid white 1px;
+	
 }
 
 #results-wrapper {
@@ -73,7 +79,8 @@ img {
 	width: 80%;
 	margin: 0;
 	padding: 0;
-	background-color: seagreen;
+	background-color: steelblue;
+	color: white;
 	text-align: center;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -100,13 +107,6 @@ img {
 	margin-right: 20%;
 	margin-bottom: 25px;
 }
-
-/*#next-page {
-	max-width: 55%
-	margin-left: -20%;
-	margin-right: 20%;
-	margin-bottom: 25px;
-}*/
 
 #general-image {
 	list-style-type: none;
