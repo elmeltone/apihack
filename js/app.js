@@ -43,7 +43,7 @@
 	};
 	
 	var showNextPage = function(query, resultPage) {
-		var page = '<a id="nextPage" href="http:' + resultPage + '"><p>Next Page</p></a>';
+		var page = '<a target="_blank" href="http:' + resultPage + '"><p class="count">Next Page</p></a>';
 		return page;
 	};
 	
