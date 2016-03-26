@@ -38,7 +38,7 @@ img {
 	font-size: 36px;
 	width: 25%;
 	margin: 0;
-	padding: 5px 0 0 10px;
+	padding: 5px 0 10px 10px;
 	float: left;
 	height: 100px;
 	color: white;
@@ -61,7 +61,20 @@ img {
 	display: inline;
 	text-align: left;
 	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.image-getter {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20%;
+}
+
+#general {
+	width: 70%;
+}
+
 #sidebar-wrapper {
 	width: 20%;
 	height: 100%;
@@ -72,6 +85,13 @@ img {
 	float: left;
 	border-right: solid white 1px;
 	
+}
+
+.button {
+	background-color: steelblue;
+	color: white;
+	border: none;
+	border-radius: 3px;
 }
 
 #results-wrapper {
