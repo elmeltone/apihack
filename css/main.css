@@ -19,7 +19,7 @@ img {
 }
 
 #title, #subtitle, #sidebar-title, .tom-trivia {
-	font-style: italic;
+	font-family: 'Marck Script', cursive;
 }
 
 #header {
@@ -34,9 +34,15 @@ img {
 	background-repeat: no-repeat
 }
 
+.tom-bust {
+	max-height: 60px;
+	padding-top: -15px;
+	padding-right: 10px;
+}
+
 #title {
-	font-size: 36px;
-	width: 25%;
+	font-size: 55px;
+	width: 30%;
 	margin: 0;
 	padding: 5px 0 10px 10px;
 	float: left;
@@ -44,10 +50,14 @@ img {
 	color: white;
 }
 
+#title p {
+	padding-left: 10px;
+}
+
 .subtitle {
 	font-size: 20px;
 	text-align: right;
-	width: 75%;
+	width: 70%;
 	margin: 0;
 	padding: 23px 15px 0 0;
 	float: right;
