@@ -21,6 +21,13 @@ a:visited {
 	color: darkblue;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 img {
 	margin: auto;
 	
@@ -171,6 +178,7 @@ img {
 	max-width: 55%
 	margin-left: 20%;
 	margin-right: 20%;
+	font-family: Georgia, serif;
 }
 
 .image-creator {
