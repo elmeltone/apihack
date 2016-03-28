@@ -101,8 +101,16 @@ img {
 	padding-left: 3%;
 }
 
+.top-button {
+	background-color: darkslateblue;
+	color: white;
+	border: none;
+	border-radius: 15px;
+}
+
 .middle {
 	width: 100%;
+	height: 74.5%;
 }
 
 #results-wrapper {
@@ -123,7 +131,7 @@ img {
 	text-align: center;
 	overflow: hidden;
 	float: none !important;
-	padding-top: 2em;
+	padding-top: 5%;
 }
 
 .tom-trivia {
@@ -134,15 +142,18 @@ img {
 	text-align: center;
 }
 
+footer {
+	height: 10%;
+}
+
 #footer-wrapper {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 10px 10px 10px 20px;
-	background-color: steelblue;
+	background-color: darkslateblue;
 	color: white;
 	float: left;
-	
 }
 
 #footer-title {
@@ -150,15 +161,36 @@ img {
 	text-align: center;
 }
 
+.detail-getter {
+	text-align: center;
+}
+
+.details-titles {
+	display: inline;
+	margin-left: 5px;
+	text-align: right;
+	padding-right: -5px;
+}
+
+.form-box {
+	width: 33.333%;
+	margin: auto;
+	padding: auto;
+	display: inline;
+}
+
 .details {
 	border-radius: 15px;
+	margin: 5px;
+	display: inline;
 }
 
 .button {
-	background-color: darkslateblue;
+	background-color: steelblue;
 	color: white;
 	border: none;
 	border-radius: 15px;
+	margin-right: 5px;
 }
 
 .count {
