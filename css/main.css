@@ -10,7 +10,15 @@ body {
 }
 
 a:link {
-	/*color: red;*/
+	color: darkblue;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: darkblue;
 }
 
 img {
@@ -133,9 +141,12 @@ img {
 }
 
 .count {
+	font-style: italic;
+	text-decoration: underline;
+	color: darkblue;
 	max-width: 55%
 	margin-left: 20%;
-	margin-right: 20%;
+	padding-right: 20%;
 	margin-bottom: 25px;
 }
 
