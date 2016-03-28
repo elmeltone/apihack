@@ -157,6 +157,13 @@ footer {
 	float: left;
 }
 
+/* ------------------ */
+/* Detailed Search Options hidden until functionality resolved */
+#footer-title, .detail-getter {
+	display: none;
+}
+/* ------------------ */
+
 #footer-title {
 	font-size: 20px;
 	text-align: center;
