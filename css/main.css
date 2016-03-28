@@ -99,6 +99,7 @@ img {
 	width: 70%;
 	border-radius: 15px;
 	padding-left: 3%;
+	text-align: center;
 }
 
 .top-button {
@@ -143,7 +144,7 @@ img {
 }
 
 footer {
-	height: 10%;
+	min-height: 10%;
 }
 
 #footer-wrapper {
@@ -222,4 +223,70 @@ footer {
 
 .hidden {
 	display: none;
+}
+
+
+
+@media screen and (min-width: 720px) and (max-width: 1030px) {
+	#title {
+		font-size: 36px;
+	}
+	#subtitle {
+		font-size: 16px;
+	}
+	.tom-bust {
+		max-height: 40px;
+	}
+	.form-box {
+		display: block;
+	}
+	.details {
+		display: block;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 719px) {
+	#title {
+		font-size: 30px;
+	}
+	#subtitle {
+		font-size: 14px;
+	}
+	.subtitle {
+		 padding: 18px 15px 0 0
+	}
+	.tom-bust {
+		max-height: 30px;
+	}
+	.form-box {
+		display: block;
+	}
+	.details {
+		display: block;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 610px) {
+	#title {
+		width: 100%;
+		height: auto;
+		padding-bottom: ;
+		text-align: center;
+	}
+	.subtitle {
+		width: 100%;
+		height: auto;
+		float: left;
+		text-align: center;
+	}
+	
+}
+
+@media screen and (max-width: 475px) {
+	#footer-title, .form-box {
+		text-align: left;
+		margin-left: 10px;
+	}
 }
