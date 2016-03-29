@@ -43,18 +43,22 @@
 	};
 	
 	var showNextPage = function(query, resultPage) {
-		var page = '<a target="_blank" href="http:' + resultPage + '"><p class="count">Next Page</p></a>';
+		var page = '<a href="#"' + resultPage + '"><p class="count">Next Page</p></a>';
 		return page;
 	};
 	
-	var getImages = function(query) {
+	var getImages = function(query, pageNum) {
 		
+		var url = 'http://loc.gov/pictures/search/?q=' + query + '&sp=' + pageNum;
+		/*var startPage = pageNum;*/
+			
 		$.ajax({
 		    type: 'search',
-		    url: 'http://loc.gov/pictures/search/?q=' + query,
+		    url: url,
 		    dataType:'jsonp',
 		    data:{
 		        fo:'json',
+				/*sp: startPage,*/
 		    },
 		})
 		.done(function(result){	
@@ -72,13 +76,19 @@
 				$(nextPage).appendTo('.results');
 			else {$(endPage).appendTo('.results')};
 			});
+		
 	};
 	
 $(function() {	
 	$('.image-getter').on('submit', function(e) {
 		e.preventDefault();
 		$('.results').html('');
+		var pageCounter = 1;
 		var query = $(this).find("input[name='general']").val();
-		getImages(query);
+		getImages(query, pageCounter);
+	});
+	$('.count').on('click', function () {
+		var currentPage = pageCounter+1;
+		getImages(query, currentPage);
 	});
 });
