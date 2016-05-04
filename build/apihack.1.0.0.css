@@ -1,16 +1,11 @@
-	
-html, body {
-	height: 100%;
-	width: 100%;
-	/*margin: auto;*/
-}
-
+html,
 body {
-	
+  height: 100%;
+  width: 100%;
+  /*margin: auto;*/
 }
-
-a:link {
-	color: darkblue;
+/*a:link {
+	color: red;
 }
 
 a:hover {
@@ -18,7 +13,7 @@ a:hover {
 }
 
 a:visited {
-	color: darkblue;
+	color: red;
 }
 
 input:focus,
@@ -155,16 +150,15 @@ footer {
 	background-color: darkslateblue;
 	color: white;
 	float: left;
-}
-
+}*/
 /* ------------------ */
 /* Detailed Search Options hidden until functionality resolved */
-#footer-title, .detail-getter {
-	display: none;
+#footer-title,
+.detail-getter {
+  display: none;
 }
 /* ------------------ */
-
-#footer-title {
+/*#footer-title {
 	font-size: 20px;
 	text-align: center;
 }
@@ -296,4 +290,5 @@ footer {
 		text-align: left;
 		margin-left: 10px;
 	}
-}
+}*/
+/*# sourceMappingURL=apihack.1.0.0.css.map */
