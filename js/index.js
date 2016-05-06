@@ -18,6 +18,7 @@ var getImages = function(query, pageNum) {
 	    },
 	})
 	.done(function(result){	
+		console.log(result);
 		var searchResults = showSearchResults(query, result.search.hits);
 		$('.results').html(searchResults);
 		$.each(result.results, function(i, item) {
@@ -39,7 +40,7 @@ $(function() {
 	$('.image-getter').on('submit', function(e) {
 		e.preventDefault();
 		$('.results').html('');
-		var pageCounter = 1;
+		var pageCounter = 2;
 		var query = $(this).find("input[name='general']").val();
 		getImages(query, pageCounter);
 	});
