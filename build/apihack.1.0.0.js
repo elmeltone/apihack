@@ -52,28 +52,30 @@
 	var showError = __webpack_require__(4);
 	var showNextPage = __webpack_require__(5);
 	
-	var getImages = function getImages(query, pageNum) {
-	
-		var url = 'http://loc.gov/pictures/search/?q=' + query;
+	var getImages = function getImages(url) {
 	
 		$.ajax({
 			type: 'search',
 			url: url,
 			dataType: 'jsonp',
 			data: {
-				fo: 'json',
-				sp: pageNum
+				fo: 'json'
 			}
 		}).done(function (result) {
 			console.log(result);
-			var searchResults = showSearchResults(query, result.search.hits);
+			var searchResults = showSearchResults(result.search.hits);
 			$('.results').html(searchResults);
 			$.each(result.results, function (i, item) {
 				var printImage = showImage(item);
 				$(printImage).appendTo('.results');
 			});
 		}).done(function (result) {
-			var nextPage = showNextPage(query /*, result.pages.next*/);
+			var previousPage = showNextPage(result.pages.previous, 'previous');
+			if (result.pages.previous != (null || undefined)) $(previousPage).appendTo('.results');
+	
+			$('.results').append('<p class="currentPage">' + result.pages.current + '</p>');
+	
+			var nextPage = showNextPage(result.pages.next, 'next');
 			var endPage = '<p id="endPage">End results</p>';
 			if (result.pages.next != (null || undefined)) $(nextPage).appendTo('.results');else {
 				$(endPage).appendTo('.results');
@@ -85,14 +87,12 @@
 		$('.image-getter').on('submit', function (e) {
 			e.preventDefault();
 			$('.results').html('');
-			var pageCounter = 2;
 			var query = $(this).find("input[name='general']").val();
-			getImages(query, pageCounter);
+			getImages('http://loc.gov/pictures/search/?q=' + query);
 		});
-		$('.count').on('click', function (e) {
+		$('.results').on('click', '.pagination', function (e) {
 			e.preventDefault();
-			var currentPage = pageCounter + 1;
-			getImages(query, currentPage);
+			getImages($(this).attr('href'));
 		});
 	});
 
@@ -9999,7 +9999,7 @@
 	var showError = __webpack_require__(4);
 	var showNextPage = __webpack_require__(5);
 	
-	var showSearchResults = function showSearchResults(query, resultNum) {
+	var showSearchResults = function showSearchResults(resultNum) {
 		var results = '<p class="count"><strong>' + resultNum + ' results...</strong></p>';
 		return results;
 	};
@@ -10036,8 +10036,8 @@
 	var showSearchResults = __webpack_require__(3);
 	var showError = __webpack_require__(4);
 	
-	var showNextPage = function showNextPage(query) {
-		var page = '<a><p class="count">Next Page</p></a>';
+	var showNextPage = function showNextPage(url, label) {
+		var page = '<p><a href="' + url + '" class="' + label + ' pagination">' + label + ' Page</a></p>';
 		return page;
 	};
 	
