@@ -1,3 +1,6 @@
+@dark-background: darkblue;
+@light-background: steelblue;
+@button-color: darkslateblue;
 
 html, body {
 	height: 100%;
@@ -9,8 +12,8 @@ body {
 
 }
 
-/*a:link {
-	color: red;
+a:link {
+	color: @dark-background;
 }
 
 a:hover {
@@ -18,7 +21,7 @@ a:hover {
 }
 
 a:visited {
-	color: red;
+	color: @dark-background;
 }
 
 input:focus,
@@ -38,9 +41,11 @@ img {
 }
 
 #header {
-	background: lightblue;
+	background: @light-background;
 	height: 10%;
-	margin-top: 0;
+	top: -10px;
+	left: -10px;
+	right: -10px;
 	padding: 10px;
 	background-image: url("http://i.imgur.com/KHm1BP7.jpg");
 	background-size: cover;
@@ -103,7 +108,7 @@ img {
 }
 
 .top-button {
-	background-color: darkslateblue;
+	background-color: @button-color;
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -119,7 +124,7 @@ img {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: steelblue;
+	background-color: @light-background;
 	color: white;
 	text-align: center;
 	overflow-x: hidden;
@@ -137,8 +142,7 @@ img {
 
 .tom-trivia {
 	width: 60%
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	font-size: 22px;
 	text-align: center;
 }
@@ -152,14 +156,14 @@ footer {
 	height: 100%;
 	margin: 0;
 	padding: 10px 10px 10px 20px;
-	background-color: darkslateblue;
+	background-color: @button-color;
 	color: white;
 	float: left;
-}*/
+}
 
 /* ------------------ */
 /* Detailed Search Options hidden until functionality resolved */
-#footer-title, .detail-getter {
+#footer-title, .detail-getter, .hidden {
 	display: none;
 }
 /* ------------------ */
@@ -194,7 +198,7 @@ footer {
 }
 
 .button {
-	background-color: steelblue;
+	background-color: @light-background;
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -204,7 +208,7 @@ footer {
 .count {
 	font-style: italic;
 	text-decoration: underline;
-	color: darkblue;
+	color: @dark-background;
 	max-width: 55%
 	margin-left: 20%;
 	margin-bottom: 25px;
@@ -230,7 +234,7 @@ footer {
 
 .hidden {
 	display: none;
-}
+}*/
 
 
 
@@ -296,4 +300,4 @@ footer {
 		text-align: left;
 		margin-left: 10px;
 	}
-}*/
+}
