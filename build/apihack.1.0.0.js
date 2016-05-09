@@ -10000,8 +10000,9 @@
 	var showNextPage = __webpack_require__(5);
 	
 	var showSearchResults = function showSearchResults(resultNum) {
-		var results = '<p class="count"><strong>' + resultNum + ' results...</strong></p>';
-		return results;
+			var commaValue = resultNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			var results = '<p class="count"><strong>' + commaValue + ' results...</strong></p>';
+			return results;
 	};
 	
 	module.exports = showSearchResults;
