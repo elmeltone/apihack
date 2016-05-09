@@ -249,5 +249,9 @@ footer {
     text-align: left;
     margin-left: 10px;
   }
+  .top-button {
+    height: 1.5rem;
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=apihack.1.0.0.css.map */
