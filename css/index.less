@@ -31,49 +31,38 @@ button:focus {
 }
 
 #header {
-	background: @light-background;
-	left: -10px;
-	right: -10px;
+	left: 0;
+	right: -50px;
 	padding: 0;
-	height: 250px;
-	background-image: url('http://i.imgur.com/KHm1BP7.jpg');
+	height: 160px;
+	/*background-image: url('http://i.imgur.com/KHm1BP7.jpg');*/
+	background-color: @button-color;
+	background-position: right;
 	background-size: cover;
-	background-position: center;
 	background-repeat: no-repeat;
+	text-align: center;
 }
 
 #bust {
-	overflow: none;
-	background-image: url('http://i.imgur.com/fthrUYo.png');
-	max-height: 60px;
-	margin: 0;
-	padding-top: 5px;
-	padding-right: 10px;
+	max-height: 65px;
+	margin-bottom: -1rem;
 	position: relative;
 }
 
 #title {
 	font-size: 55px;
-	width: 30%;
-	margin: 0;
-	padding: 5px 0 10px 10px;
-	float: left;
-	height: 100px;
+	padding: 0.5rem;
 	color: white;
+	text-align: center;
+	margin: 0 auto 0 auto;
 }
 
-#title p {
-	padding-left: 10px;
-}
-
-.subtitle {
+#subtitle {
 	font-size: 20px;
-	text-align: right;
-	width: 70%;
-	margin: 0;
-	padding: 23px 15px 0 0;
-	float: right;
-	height: 100px;
+	padding: 0;
+	text-align: center;
+	margin: auto;
+	height: auto;
 	color: white;
 }
 
@@ -82,29 +71,32 @@ button:focus {
 	max-height: 2em;
 	display: inline;
 	text-align: left;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .image-getter {
-	background-color: @light-background;
+	background-color: @button-color;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 20%;
-	padding-top: 2rem;
+	padding-top: 1rem;
 	padding-bottom: 2rem;
+	overflow: visible;
 }
 
 #general {
+	height: 1.5rem;
 	width: 70%;
+	font-size: 18px;
 	border-radius: 15px;
 	padding-left: 3%;
 	text-align: center;
 }
 
 .top-button {
-	background-color: @button-color;
+	background-color: @light-background;
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -166,7 +158,7 @@ footer {
 }
 /* ------------------ */
 
-/*#footer-title {
+#footer-title {
 	font-size: 20px;
 	text-align: center;
 }
@@ -203,15 +195,6 @@ footer {
 	margin-right: 5px;
 }
 
-.count {
-	font-style: italic;
-	text-decoration: underline;
-	color: @dark-background;
-	max-width: 55%
-	margin-left: 20%;
-	margin-bottom: 25px;
-}
-
 #general-image {
 	list-style-type: none;
 	padding-bottom: 25px;
@@ -220,8 +203,7 @@ footer {
 
 #general-image li {
 	max-width: 55%
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	font-family: Georgia, serif;
 	text-align: center;
 }
@@ -232,7 +214,7 @@ footer {
 
 .hidden {
 	display: none;
-}*/
+}
 
 
 
