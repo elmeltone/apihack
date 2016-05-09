@@ -29,6 +29,7 @@ button:focus {
   left: 0;
   right: 0;
   padding: 0;
+  width: 100%;
   height: 165px;
   /*background-image: url('http://i.imgur.com/KHm1BP7.jpg');*/
   background-color: darkslateblue;
