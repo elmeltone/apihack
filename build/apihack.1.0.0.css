@@ -249,6 +249,9 @@ footer {
     text-align: left;
     margin-left: 10px;
   }
+  .image-getter {
+    padding-left: 20%;
+  }
   .top-button {
     height: 1.5rem;
     font-size: 12px;
