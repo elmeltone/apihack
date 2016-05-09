@@ -27,7 +27,7 @@ button:focus {
 }
 #header {
   left: 0;
-  right: -50px;
+  right: 0;
   padding: 0;
   height: 165px;
   /*background-image: url('http://i.imgur.com/KHm1BP7.jpg');*/
