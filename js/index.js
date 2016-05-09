@@ -24,17 +24,17 @@ var getImages = function(url) {
 		});
 	})
 	.done(function(result){
-		var previousPage = showNextPage(result.pages.previous, 'previous');
-		if (result.pages.previous != ((null) || (undefined)))
-			$(previousPage).appendTo('.results');
-
 		$('.results').append('<p class="currentPage">'+result.pages.current+'</p>');
 
-		var nextPage = showNextPage(result.pages.next, 'next');
+		var nextPage = showNextPage(result.pages.next, 'Next');
 		var endPage = '<p id="endPage">End results</p>';
 		if (result.pages.next != ((null) || (undefined)))
 			$(nextPage).appendTo('.results');
 		else {$(endPage).appendTo('.results')};
+
+		var previousPage = showNextPage(result.pages.previous, 'Previous');
+		if (result.pages.previous != ((null) || (undefined)))
+			$(previousPage).appendTo('.results');
 		});
 
 };
